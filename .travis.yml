@@ -1,0 +1,30 @@
+branches:
+  only:
+    - master
+
+matrix:
+  include:
+    - name: Dataset
+
+      language:
+        python
+
+      python:
+        - 3.7.4
+
+      services:
+        - postgresql
+
+      before_install:
+        - go version
+        - go get -u gopkg.in/src-d/go-siva.v1/...
+        - go get github.com/src-d/datasets/PublicGitArchive/pga
+        - go get -v github.com/src-d/datasets/PublicGitArchive/pga-create/...
+
+      install:
+        - pip install requests
+
+      script:
+        - pga --help
+        - siva version
+        - pga-create --help
