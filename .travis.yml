@@ -9,8 +9,6 @@ matrix:
       language:
         python
 
-      go:
-        - "1.12.16"
       python:
         - 3.7.4
 
@@ -18,6 +16,9 @@ matrix:
         - postgresql
 
       before_install:
+        - wget https://dl.google.com/go/go1.12.12.linux-amd64.tar.gz
+        - sudo tar -xvf go1.13.1.linux-amd64.tar.gz
+        - sudo mv go /usr/local
         - go version
         - go get -u gopkg.in/src-d/go-siva.v1/...
         - go get github.com/src-d/datasets/PublicGitArchive/pga
