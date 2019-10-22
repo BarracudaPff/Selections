@@ -9,6 +9,8 @@ matrix:
       language:
         python
 
+      go:
+        - "1.12.16"
       python:
         - 3.7.4
 
@@ -19,7 +21,7 @@ matrix:
         - go version
         - go get -u gopkg.in/src-d/go-siva.v1/...
         - go get github.com/src-d/datasets/PublicGitArchive/pga
-        - go get -u github.com/src-d/datasets/PublicGitArchive/pga-create/...
+        - go get -v github.com/src-d/datasets/PublicGitArchive/pga-create/...
 
       install:
         - pip install requests
