@@ -19,6 +19,9 @@ matrix:
         - wget https://dl.google.com/go/go1.12.12.linux-amd64.tar.gz
         - sudo tar -xvf go1.12.12.linux-amd64.tar.gz
         - sudo mv go /usr/local
+        - export GOROOT=/usr/local/go
+        - export GOPATH=$HOME/Projects/Proj1
+        - export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
         - go version
         - go get -u gopkg.in/src-d/go-siva.v1/...
         - go get github.com/src-d/datasets/PublicGitArchive/pga
