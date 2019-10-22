@@ -17,7 +17,7 @@ matrix:
 
       before_install:
         - wget https://dl.google.com/go/go1.12.12.linux-amd64.tar.gz
-        - sudo tar -xvf go1.13.1.linux-amd64.tar.gz
+        - sudo tar -xvf go1.12.12.linux-amd64.tar.gz
         - sudo mv go /usr/local
         - go version
         - go get -u gopkg.in/src-d/go-siva.v1/...
