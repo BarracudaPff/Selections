@@ -18,8 +18,11 @@ matrix:
       before_install:
         - go version
         - go get -u gopkg.in/src-d/go-siva.v1/...
+        - siva version
         - go get github.com/src-d/datasets/PublicGitArchive/pga
-        - go get -v github.com/src-d/datasets/PublicGitArchive/pga-create/...
+        - pga
+        - go get -u github.com/src-d/datasets/PublicGitArchive/pga-create/...
+        - pga-create --help
 
       install:
         - pip install requests
